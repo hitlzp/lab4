@@ -16,8 +16,8 @@ urlpatterns = patterns('',
     url(r'^show/$',show),
     url(r'^static/(?P<path>.*)$','django.views.static.serve',{'document_root': settings.STATIC_ROOT }),
     # Examples:
-    # url(r'^$', 'bookdemo.views.home', name='home'),
-    # url(r'^bookdemo/', include('bookdemo.foo.urls')),
+    url(r'^$', 'bookdemo.views.home', name='home'),
+    url(r'^bookdemo/', include('bookdemo.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),

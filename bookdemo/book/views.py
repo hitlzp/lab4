@@ -66,6 +66,10 @@ def list(request):
     all_objects = Book.objects.all()
     return render_to_response('list.html',{'all_objects':all_objects})
 
+def list(request):
+    all_objects = Book.objects.all()
+    return render_to_response('list.html',{'all_objects':all_objects})
+
 def delete(request):
     id1 = request.GET["id"] 
     Book.objects.filter(ISBN=id1).delete()
