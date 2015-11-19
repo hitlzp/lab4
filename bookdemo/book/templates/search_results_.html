@@ -1,0 +1,27 @@
+﻿﻿
+<html >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>search results</title>
+<style type="text/css">
+</style>
+</head>
+
+<body bgcolor = "#F0F8FF" background="/static/book.jpg">
+<a href="http://127.0.0.1:8000/search/">重新查找</a>
+<a href="http://127.0.0.1:8000/add/">添加图书</a>
+<a href="http://127.0.0.1:8000/view_all/" >返回首页</a>
+<table width="398" height="195" border="1" align="center">
+<tr>
+<th>ISBN</th>
+<th>Title</th>
+</tr>
+{% for Book in query_list %}
+  <tr>
+    <td >{{Book.ISBN}}</td>
+    <td>{{Book.Title}}</td>
+  </tr>
+{% endfor %}
+</table>
+</body>
+</html>

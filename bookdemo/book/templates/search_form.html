@@ -1,0 +1,20 @@
+﻿﻿<html>
+<head>
+    <title>Search</title>
+</head>
+<style type="text/css">
+
+</style>
+<body bgcolor = "#F0F8FF" background="/static/book.jpg">
+    {%if error %}
+    <p style="color: red;">Please submit a search term (by Name).</p>
+    {%else %}
+    <p style="color: red;">The Name doesn't exist!</p>
+    {%endif%}
+    <form action="" method="get">
+        <input type="text" name="q" >
+        <input type="submit" value="Search" >
+    <a href="http://127.0.0.1:8000/view_all" class="form_">返回首页</a>
+    </form>
+</body>
+</html>

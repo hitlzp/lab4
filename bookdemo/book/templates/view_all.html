@@ -1,0 +1,40 @@
+﻿﻿<html>
+<head> 
+<title>欢迎界面</title> 
+</head>
+<body bgcolor = "AFAF61", link="black" alink="red" vlink="blue" background="/static/book.jpg">
+<font color = #A23400, size = 7, style="left: 500px; position: absolute; top: 100px;">图书管理系统</font>
+<font color = 0000, size = 6, style="left: 270px; position: absolute; top: 230px;">已收录</font>
+<a  href="http://127.0.0.1:8000/search/">
+<font size = 7 style="left: 800px; position: absolute; top: 280px;">查找图书</font></a>
+<a  href="http://127.0.0.1:8000/add/">
+<font size = 7 style="left: 800px; position: absolute; top: 380px;">添加图书</font></a>
+<a  href="http://127.0.0.1:8000/list/">
+<font size = 7 style="left: 800px; position: absolute; top: 480px;">编辑图书</font></a>
+<style>
+table.pos {
+ position: absolute;
+ top: 280px;
+ left: 200px;
+ width: 280px;
+ border: 1px solid black;
+}
+</style>
+
+
+<table width="420" height="270" border="4" cellspacing="0" cellpadding="0" class="pos">
+<tr>
+<th>ISBN</th>
+<th>Title</th>
+</tr>
+{% for Book in all_objects %}
+  <tr>
+    <td>{{Book.ISBN}}</td>
+    <td><a href= "http://127.0.0.1:8000/show?id2={{Book.Title}}">{{Book.Title}}</td>
+  </tr>
+{% endfor %}
+</table>
+<br /> 
+</div>
+</body>
+</html>

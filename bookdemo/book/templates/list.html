@@ -1,0 +1,29 @@
+﻿﻿<html >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>view all</title>
+<style type="text/css">
+</style>
+</head>
+
+<body bgcolor = "#F0F8FF" background="/static/book.jpg">
+<a href="http://127.0.0.1:8000/search/">查询图书</a>
+<a href="http://127.0.0.1:8000/add/">添加图书</a>
+<a href="http://127.0.0.1:8000/view_all/" >返回主页</a>
+<table width="398" height="195" border="1" align="center">
+<tr>
+<th>ISBN</th>
+<th>Title</th>
+</tr>
+{% for Book in all_objects %}
+  <tr>
+
+    <td width="387">{{Book.ISBN}}</td>
+    <td>{{Book.Title}}</td>
+    <td><a href="/delete/?id={{Book.ISBN}}">删除</a></td>
+    <td><a href="/change/?id={{Book.ISBN}}&judge=True">修改</a></td>
+  </tr>
+{% endfor %}
+</table>
+</body>
+</html>
